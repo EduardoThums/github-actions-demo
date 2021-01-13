@@ -53,6 +53,8 @@ jobs:
 
       - name: Authenticate on Heroku
         run: heroku authorizations:create
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
 
       - name: Deploy the JAR
         run: heroku deploy:jar api.jar --app et-github-actions-demo
