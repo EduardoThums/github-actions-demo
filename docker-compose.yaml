@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  database:
+    container_name: postgresql-database
+    image: postgres:13.1
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: github-actions-demo
+      POSTGRES_USER: github-actions-demo
+      POSTGRES_PASSWORD: github-actions-demo
